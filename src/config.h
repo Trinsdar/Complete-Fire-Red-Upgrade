@@ -27,34 +27,34 @@
 #define VAR_PARTNER_BACKSPRITE 0x5012 //Set this to the var used to store the backsprite number of your partner in Multi Battles (can be any free var)
 
 /*===== General Flags =====*/
-#define FLAG_INVERSE 0x900 //Set this flag for all battles to become Inverse Battles
-#define FLAG_SKY_BATTLE 0x901 //Set this flag to indicate the Sky Battle rules should be followed in the next battle.
-#define FLAG_NO_CATCHING 0x902 //The player cannot catch Pokemon in battles when this flag is set
-#define FLAG_NO_RUNNING 0x903 //The player cannot run in battles when this flag is set
-#define FLAG_NO_CATCHING_AND_RUNNING 0x904 //The player cannot run or catch Pokemon in battles when this flag is set
-#define FLAG_CATCH_TRAINERS_POKEMON 0x905 //Setting this flag will allow you to capture trainers' pokemon. Comment this line to remove this feature
-#define FLAG_EXP_SHARE 0x906 //Used to indicate if the Gen 6+ Exp Share is enabled
+//#define FLAG_INVERSE 0x900 //Set this flag for all battles to become Inverse Battles
+//#define FLAG_SKY_BATTLE 0x901 //Set this flag to indicate the Sky Battle rules should be followed in the next battle.
+//#define FLAG_NO_CATCHING 0x902 //The player cannot catch Pokemon in battles when this flag is set
+//#define FLAG_NO_RUNNING 0x903 //The player cannot run in battles when this flag is set
+//#define FLAG_NO_CATCHING_AND_RUNNING 0x904 //The player cannot run or catch Pokemon in battles when this flag is set
+//#define FLAG_CATCH_TRAINERS_POKEMON 0x905 //Setting this flag will allow you to capture trainers' pokemon. Comment this line to remove this feature
+//#define FLAG_EXP_SHARE 0x906 //Used to indicate if the Gen 6+ Exp Share is enabled
 #define FLAG_DOUBLE_BATTLE 0x907 //Setting this flag will automatically trigger a double battle if possible
 #define FLAG_TAG_BATTLE 0x908 //This flag is set by the engine when trainerbattle 0x10 is used to activate a tag battle
 #define FLAG_TWO_OPPONENTS 0x909 //This flag is set by the engine when trainerbattle 0x11 is used to activate a dual opponent battle
 #define FLAG_ACTIVATE_TUTORIAL 0x90A //Setting this flag will allow you to activate Oak's tutorial in any kind of battle (including doubles). Comment this line to remove this feature
 #define FLAG_WILD_CUSTOM_MOVES 0x90B //Setting this flag lets you assign wild Pokemon custom moves
-#define FLAG_SMART_WILD 0x90C //Set this flag is you don't want wild Pokemon to act randomly (useful for one time smarter wild battles). This is cleared at the end of the battle.
-#define FLAG_SCALE_WILD_POKEMON_LEVELS 0x90D //If this flag is set, all random wild Pokemon (other than scripted ones) will have their level scaled to the lowest level in the player's party
-#define FLAG_SCALE_TRAINER_LEVELS 0x90E //If this flag is set, all Trainer Pokemon levels will be set to the highest in your party
+//#define FLAG_SMART_WILD 0x90C //Set this flag is you don't want wild Pokemon to act randomly (useful for one time smarter wild battles). This is cleared at the end of the battle.
+//#define FLAG_SCALE_WILD_POKEMON_LEVELS 0x90D //If this flag is set, all random wild Pokemon (other than scripted ones) will have their level scaled to the lowest level in the player's party
+//#define FLAG_SCALE_TRAINER_LEVELS 0x90E //If this flag is set, all Trainer Pokemon levels will be set to the highest in your party
 #define FLAG_HIDDEN_ABILITY 0x90F //If this flag is set, generated wild Pokemon will have their hidden abilities
-#define FLAG_DOUBLE_WILD_BATTLE 0x910 //If this flag is set, a wild battles will be against two Pokemon
-#define FLAG_NO_RANDOM_WILD_ENCOUNTERS 0x911 //If this is set, wild Pokemon won't appear when walking/surfing in grass, caves, water, etc.
+//#define FLAG_DOUBLE_WILD_BATTLE 0x910 //If this flag is set, a wild battles will be against two Pokemon
+//#define FLAG_NO_RANDOM_WILD_ENCOUNTERS 0x911 //If this is set, wild Pokemon won't appear when walking/surfing in grass, caves, water, etc.
 #define FLAG_REMOVE_EVO_ITEM 0x912  //Flag to toggle item removal after leveling up (set by the engine)
 #define FLAG_SHINY_CREATION 0x913 //Flag to cause next battle to be against a shiny Pokemon
-#define FLAG_AUTO_RUN 0x914 //Flag to enable auto-run (toggled by L-button). If this feature is used, L=A will not work. Comment out this line for it to work again.
+//#define FLAG_AUTO_RUN 0x914 //Flag to enable auto-run (toggled by L-button). If this feature is used, L=A will not work. Comment out this line for it to work again.
 #define FLAG_RUNNING_ENABLED 0x82F //The player can only run if this flag is set. If commented, the player will start the game with running shoes.
-#define FLAG_DISABLE_BAG 0x915 //The bag can't be used in-battle if this flag is set
+//#define FLAG_DISABLE_BAG 0x915 //The bag can't be used in-battle if this flag is set
 #define FLAG_MOVE_RELEARNER_IGNORE_LEVEL 0x916 //When set, the move relearner shows all level-up moves up to MAX_LEVEL
 #define FLAG_EGG_MOVE_RELEARNER 0x917 //When set, the move learner loads egg moves instead
-#define FLAG_DYNAMAX_BATTLE 0x918 //When set, Pokemon can Dynamax in battle
-#define FLAG_RAID_BATTLE 0x919 //When set, wild Pokemon will appear Dynamaxed and be fought Raid Battle style.
-#define FLAG_RAID_BATTLE_NO_FORCE_END 0x91A //When set, if FLAG_RAID_BATTLE is set, then raid battles won't be force ended.
+//#define FLAG_DYNAMAX_BATTLE 0x918 //When set, Pokemon can Dynamax in battle
+//#define FLAG_RAID_BATTLE 0x919 //When set, wild Pokemon will appear Dynamaxed and be fought Raid Battle style.
+//#define FLAG_RAID_BATTLE_NO_FORCE_END 0x91A //When set, if FLAG_RAID_BATTLE is set, then raid battles won't be force ended.
 #define FLAG_FAST_BATTLE_MESSAGES 0x925 //When set, battle messages have no wait time once they've completed printing
 
 /*===== Start Menu/Poketools Flags =====*/
@@ -130,9 +130,9 @@ enum //These vars need to be one after the other (hence the enum)
 #define NUM_TRAINER_CLASSES 107 //Vanilla FR has 107
 #define EVOS_PER_MON 5 //The number of maximum evolutions per Pokemon. Vanilla FR has 5. DPE has 16
 #define EV_CAP 252 //Also change this in the file "asm_defines.s" found in the root
-#define POWER_ITEM_EV_YIELD 8 //Set to 4 for older mechanic
+#define POWER_ITEM_EV_YIELD 4 //Set to 4 for older mechanic
 
-#define DUSK_BALL_MULTIPLIER 30 //Change this line to 35 to make the catch rate for the Dusk Ball 3.5x like before Gen 7
+#define DUSK_BALL_MULTIPLIER 35 //Change this line to 35 to make the catch rate for the Dusk Ball 3.5x like before Gen 7
 #define STANDARD_IV 10 //Change this to be the number of IVs Pokemon owned by random trainers should have (all stats will have this number)
 #define SWARM_CHANCE 50 //Change this to the percentage that swarming Pokemon will appear if they can be found on the current route.
 #define WILD_DOUBLE_RANDOM_CHANCE 50 //Change this to the percentage that a wild double battle will be initiated if the player is in special grass.
@@ -175,7 +175,7 @@ enum //These vars need to be one after the other (hence the enum)
 #define FLAG_LOAD_MUGSHOT_SPRITE_FROM_TABLE 0x924 //Load custom mugshot for pre-battle transition
 
 /*=====Safari Zone Options=====*/
-#define EXPAND_SAFARI_BALLS	//Hold up to 0xFFFF safari balls
+//#define EXPAND_SAFARI_BALLS	//Hold up to 0xFFFF safari balls
 #define SAFARI_ZONE_MAX_STEPS 600	//Number of safari zone steps the player has
 #define SAFARI_ZONE_BALL_START 30	//Number of safari balls the player starts with
 #define MAX_SAFARI_BALLS 30		//Total safari balls player can get (maximum is 0xFFFF or 0xFF if EXPAND_SAFARI_BALLS is defined or not)
@@ -190,7 +190,7 @@ enum //These vars need to be one after the other (hence the enum)
 //#define EXISTING_OW_TABLE_ADDRESS 0x81a2000 //Uncomment if you don't want new overworld NPC tables to be generated.
 
 /*===== Other General Options =====*/
-#define TIME_ENABLED //Comment this line to disable time based features. All time dependent features will default in Daytime.
+//#define TIME_ENABLED //Comment this line to disable time based features. All time dependent features will default in Daytime.
 #define DNS_IN_BATTLE //Comment this line to disable the Day/Night system from working in battle
 #define OVERWRITE_RIVAL //Comment this line to disable to loading of your rival's name into trainer classes 0x51, 0x59, and 0x5A
 #define TRAINER_CLASS_POKE_BALLS //Comment this line to disable creating Trainer's pokemon with Poke Balls specific to their trainer class
@@ -202,8 +202,8 @@ enum //These vars need to be one after the other (hence the enum)
 #define DISPLAY_EFFECTIVENESS_ON_MENU //If this line remains uncommented, move types will have their effectiveness indicated on the move menu by highlighting the move type
 #define OVERWRITE_BG_FOR_LEADER_CHAMPION //If this remains uncommented, special Battle Background palettes will be loaded in for battles against Gym Leaders and the Champion
 #define BRIDGE_FIX //If this remains uncommented, the water battle background will only be loaded if the player's surfing sprite is shown
-#define MEGA_EVOLUTION_FEATURE //Comment this line to remove Mega Evolutions
-#define DYNAMAX_FEATURE //Comment this line to remove Dynamax and Raid Battles
+//#define MEGA_EVOLUTION_FEATURE //Comment this line to remove Mega Evolutions
+//#define DYNAMAX_FEATURE //Comment this line to remove Dynamax and Raid Battles
 #define TUTORIAL_BATTLES //Comment this line to remove Oak's Tutorial
 #define TANOBY_RUINS_ENABLED //The Tanoby Ruins will be the only location Unown can be encountered
 #define ALTERING_CAVE_ENABLED //The Altering Cave from FR will work as intended provided the proper var is set
@@ -213,13 +213,13 @@ enum //These vars need to be one after the other (hence the enum)
 #define SELECT_FROM_PC //Comment this out to remove select-from-pc hack
 //#define SET_HEALING_PLACE_HACK  //Comment this out if you don't want custom map/bank whiteout respawn locations
 //#define FOSSIL_IMAGE_HACK   // uncommenting includes JPANs fossil image hack (see EXISTING_FOSSIL_IMAGE_TABLE_ADDRESS)
-#define EVO_HOLD_ITEM_REMOVAL //Comment this out if you want leveling up/hold item evolution (eg. sneasel) to remove the item (like normal)
+//#define EVO_HOLD_ITEM_REMOVAL //Comment this out if you want leveling up/hold item evolution (eg. sneasel) to remove the item (like normal)
 #define EXPAND_MOVESETS //Comment this out if you're using the Dynamic Pokemon Expansion repo to expand the movesets
 #define FATHER_PASSES_TMS //Comment this out if you don't want TMs the father knows to be passed through breeding
 //#define INHERIT_MASTER_CHERISH_BALL  //Uncomment this if you want Master and Cherish balls to be inherited by daycare offspring
 //#define GIVEPOKEMON_CUSTOM_HACK //Alows custom Pokemon to be given by setting the second last byte of the givepokemon scripting command
 //#define GIVEPOKEMON_BALL_HACK //Allows Pokemon to be given with a custom ball by setting the last byte of the givepokemon scripting command
-#define FRLG_ROAMING //When a roaming Pokemon is created, it will either be a Entei, Raikou, or Suicune, depending on the player's starter choice
+//#define FRLG_ROAMING //When a roaming Pokemon is created, it will either be a Entei, Raikou, or Suicune, depending on the player's starter choice
 #define CAN_RUN_IN_BUILDINGS //Comment this line out to prevent the player from running indoors.
 //#define NO_POISON_IN_OW //Uncommenting this line will stop Pokemon from taking Poison damage in the overworld.
 #define POISON_1_HP_SURVIVAL //Comment this line to allow Pokemon to faint from Poison in the overworld.
@@ -239,7 +239,7 @@ enum //These vars need to be one after the other (hence the enum)
 #define HIGH_PITCH_MEGA_PRIMAL_CRY //Mega Pokemon cries will be higher pitched. This is useful if you're using the base form cries for Mega Evolutions
 #define SCROLLING_MULTICHOICE //Enables scrolling multichoice menus by using special 0x158.
 //#define REPLACE_SOME_VANILLA_SPECIALS //Replaces the sp07C, sp07D, sp09E, sp156, & sp18B with modified versions. Breaks vanilla FR compatability.
-#define REPLACE_ASH_WEATHER_WITH_WHITE_SANDSTORM //Replaces the falling ash weather effect with a white version of the sandstorm weather effect
+//#define REPLACE_ASH_WEATHER_WITH_WHITE_SANDSTORM //Replaces the falling ash weather effect with a white version of the sandstorm weather effect
 //#define ONLY_CHECK_ITEM_FOR_HM_USAGE //Allows HMs to be used if the HM is the Bag, and as long as there is a Pokemon in the party that can learn the HM
 
 /*===== Misc Battle Effect Options =====*/
@@ -270,10 +270,10 @@ enum //These vars need to be one after the other (hence the enum)
 //#define PORTAL_POWER //Uncomment this line to enable Hoopa-Unbound's special ability in Pokemon Unbound, Portal Power (reduces power of non-contact moves by 25%)
 //#define OLD_SOUL_DEW_EFFECT //Uncomment this line if you want the Soul Dew to double Latios + Latias' Sp. Atk & Sp. Def
 //#define OLD_PARENTAL_BOND_DAMAGE //Uncomment this line to make the second hit of Parental Bond do 50% of the original damage instead of 25%
-#define GEN_6_POWER_NERFS //Comment out for moves that had powers nerfed in Gen 6 to retain their original base powers.
-#define GEN_7_POWER_NERFS //Comment out for Sucker Punch to retain its original base power.
-#define BUFFED_LEECH_LIFE //Comment out for Leech Life to retain its original base power.
-#define DARK_VOID_ACC_NERF //Comment out for Dark Void to retain its original accuracy.
+//#define GEN_6_POWER_NERFS //Comment out for moves that had powers nerfed in Gen 6 to retain their original base powers.
+//#define GEN_7_POWER_NERFS //Comment out for Sucker Punch to retain its original base power.
+//#define BUFFED_LEECH_LIFE //Comment out for Leech Life to retain its original base power.
+//#define DARK_VOID_ACC_NERF //Comment out for Dark Void to retain its original accuracy.
 
 /*===== Capturing Pokemon Options =====*/
 //#define NO_HARDER_WILD_DOUBLES //In Gen 5, Pokemon encountered in double wild battles were harder to catch (based on how many species are owned). Uncomment this line to remove the catch rate decrement.
